@@ -14,12 +14,14 @@ namespace TylersVidly
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                "MoviesByReleaseDate",
-                //this will be the address
-                //syntax is important!!!!
-                "movie/released/{year}/{month}",
-                new { controller = "Movie", action = "ByReleaseDate" });
+            routes.MapMvcAttributeRoutes();
+
+            //routes.MapRoute(
+            //    "MoviesByReleaseDate",
+            //    //this will be the address
+            //    //syntax is important!!!!
+            //    "movie/released/{year}/{month}",
+            //    new { controller = "Movie", action = "ByReleaseDate" });
 
             routes.MapRoute(
                 name: "Default",

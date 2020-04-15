@@ -25,10 +25,15 @@ namespace TylersVidly.Controllers
 
         }
 
-        public ActionResult ByReleaseDate(int year, int month)
+        //Custom Route the easier solution.
+        [Route("movies/released/{year}/{month}")]
+        public ActionResult ByReleaseYear(int year, int month)
         {
             return Content(year + "/" + month);
         }
+
+
+
 
         public ActionResult Edit(int id)
         {
